@@ -13,7 +13,7 @@
 
 /*------------------------------------------------------------------------ */
 #if defined(__AVR_ATmega168__) || defined(__AVR_ATmega168P__) || \
-    defined(__AVR_ATmega328P__) || defined(__AVR_ATmega328PB__) || \
+    defined(__AVR_ATmega328__) || defined(__AVR_ATmega328P__) || defined(__AVR_ATmega328PB__) || \
     defined(__AVR_ATmega88) || defined(__AVR_ATmega8__) || defined(__AVR_ATmega88__)
 /*------------------------------------------------------------------------ */
 
@@ -63,7 +63,7 @@
 # define UART_SRL UBRR2L
 # define UART_UDR UDR2
 #elif UART == 3
-#if !defined(UDR1)
+#if !defined(UDR3)
 #error UART == 3, but no UART3 on device
 #endif
 # define UART_SRA UCSR3A
